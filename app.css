@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    width: calc(600px / var(--cols));
+    height: calc(600px / var(--rows));
+    background-color: whitesmoke;
+    outline: 1px solid black;
+}
+
+.tile:hover {
+    background-color: black;
+}
+
+.board>[data-status="dead"] {
+    background-color: red;
+}
+
+.board>[data-status="alive"] {
+    background-color: black;
+}
