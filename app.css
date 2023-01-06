@@ -34,9 +34,9 @@ body {
 }
 
 .board>[data-status="dead"] {
-    background-color: red;
+    background-color: rgb(195, 195, 195);
 }
 
 .board>[data-status="alive"] {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
